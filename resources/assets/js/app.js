@@ -11,7 +11,10 @@ import Buefy from 'buefy';
 window.Vue = require('vue');
 
 // Buefy for bulma css
-Vue.use(Buefy)
+Vue.use(Buefy,{
+    defaultIconPack: 'fas',
+    defaultContainerElement: '#content'
+})
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

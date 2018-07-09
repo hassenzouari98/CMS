@@ -24,10 +24,14 @@
     <div id="app">
 
         <!-- Navigation -->
-        @include('partials/navigation')
+        <header>
+            @include('partials/navigation')
+        </header>
 
         <!-- Content -->
-        @yield('content')
+        <main>
+            @yield('content')
+        </main>
 
     </div>
 </body>

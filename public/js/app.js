@@ -991,7 +991,10 @@ __webpack_require__(11);
 window.Vue = __webpack_require__(35);
 
 // Buefy for bulma css
-Vue.use(__WEBPACK_IMPORTED_MODULE_0_buefy___default.a);
+Vue.use(__WEBPACK_IMPORTED_MODULE_0_buefy___default.a, {
+  defaultIconPack: 'fas',
+  defaultContainerElement: '#content'
+});
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

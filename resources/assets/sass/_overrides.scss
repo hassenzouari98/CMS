@@ -1,0 +1,21 @@
+/* ========================================
+   ============ Text Overrides ===========
+   ======================================== */
+
+.is-muted {
+    color: $grey-light !important;
+}
+
+a.is-muted:hover{
+    color: $grey !important;
+}
+
+/* ========================================
+   ============ NavBar Overrides ===========
+   ======================================== */
+
+nav.top-navbar {
+    a.navbar-item:hover, a.navbar-item.is-active, .navbar-link:hover, .navbar-link.is-active {
+        border-bottom: 1px solid $primary;
+    }
+}

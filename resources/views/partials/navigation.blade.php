@@ -1,11 +1,12 @@
-<nav class="navbar has-shadow is-fixed-top" role="navigation" aria-label="main navigation">
+<nav class="navbar top-navbar has-shadow" role="navigation" aria-label="main navigation">
 
     <!-- Navbar Brand -->
     <div class="navbar-brand">
 
         <!-- Logo -->
-        <a class="navbar-item" href="https://bulma.io">
+        <a class="navbar-item"  href="{{ url('/') }}">
             <img src="{{ asset('images/logo.png') }}" alt="Logo" width="112" height="28">
+            {{ config('app.name', 'Laravel') }}
         </a>
 
         <!-- Humburger -->
@@ -38,11 +39,11 @@
 
             <!-- Guest Links -->
             @guest
-                <a class="navbar-item">
-                    Login
+                <a class="navbar-item" href="{{ route('login') }}">
+                    {{ __('Login') }}
                 </a>
-                <a class="navbar-item">
-                    Join The Community
+                <a class="navbar-item" href="{{ route('register') }}">
+                    {{ __('Register') }}
                 </a>
             @endguest
 
@@ -50,7 +51,7 @@
             @auth
                 <div class="navbar-item has-dropdown is-hoverable">
                     <a class="navbar-link">
-                        Hassen
+                        {{ Auth::user()->name }}
                     </a>
 
                     <div class="navbar-dropdown is-right">
@@ -67,10 +68,14 @@
                             <span class="p-l-5">Settings</span>
                         </a>
                         <hr class="navbar-divider">
-                        <a class="navbar-item">
+                        <a class="navbar-item" href="{{ route('logout') }}" 
+                            onclick="event.preventDefault();document.getElementById('logout-form').submit();">
                             <i class="fas fa-sign-out-alt"></i> 
-                            <span class="p-l-5">Logout</span>
+                            <span class="p-l-5">{{ __('Logout') }}</span>
                         </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
                     </div>
                 </div>
             @endauth

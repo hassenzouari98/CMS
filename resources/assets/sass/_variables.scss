@@ -1,8 +1,28 @@
 
 // Body
-$body-bg: #f5f8fa;
+$body-bg: whitesmoke;
 
 // Typography
 $font-family-sans-serif: "Raleway", sans-serif;
 $font-size-base: 0.9rem;
 $line-height-base: 1.6;
+$text-color: #636b6f;
+
+// Brands
+$brand-primary: #3097D1;
+$brand-info: #8eb4cb;
+$brand-success: #2ab27b;
+$brand-warning: #cbb956;
+$brand-danger: #bf5329;
+
+// Navbar
+$navbar-default-bg: #fff;
+
+// Buttons
+$btn-default-color: $text-color;
+
+// Panels
+$panel-default-heading-bg: #fff;
+
+// Box shadows
+$main-box-shadow: 0 0 1pxrgba(57,70,78,.15), 0 20px 55px -8px rgba(57,70,78,.25);
